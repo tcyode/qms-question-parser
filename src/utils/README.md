@@ -17,4 +17,3 @@ Common helper functions used across the application.
 - `dateUtils.js`: Date handling functions
 - `idGenerator.js`: Unique ID creation
 - `logger.js`: Logging functionality
-```
