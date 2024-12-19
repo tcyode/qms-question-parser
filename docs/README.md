@@ -4,7 +4,7 @@
 - `Setup/` = Getting Started
 - `User Guide/` = Daily Operations
 - `Admin Guide/` = Behind the Scenes
-- 
+  
 ## Contents
 - Setup Guide
 - User Manual
