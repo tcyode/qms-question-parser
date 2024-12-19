@@ -1,5 +1,10 @@
 # Source Code Structure 🔧
 
+💡 **How They Work Together:**
+
+User clicks menu → Handler activates →  
+Parser processes data → Utils help throughout →  
+Handler updates sheets
 ## Folders
 - `parsing/`: Functions for parsing Discord messages into structured data
 - `utils/`: Helper functions and common utilities
