@@ -12,7 +12,7 @@ Think of this like a receptionist 👋
 - Controls automated tasks
 - Directs traffic
 
-Example: Like when you click "Parse Questions" in the menu, the handler decides what to do 
+Example: Like when you click "Parse Questions" in the menu, the handler decides what to do  
 In YOUR Project: - `handlers/`: Manages the Google Sheets menus and buttons
 
 ## Main Functions
