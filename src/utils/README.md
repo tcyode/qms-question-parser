@@ -2,7 +2,7 @@
 
 ## Purpose
 Common helper functions used across the application.
-````
+
 💡 **Purpose**: Think of this as your toolbox - these are general-purpose functions that help with common tasks across the application.
 
 ## Main Functions
