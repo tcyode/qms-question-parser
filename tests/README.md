@@ -5,6 +5,11 @@
 `unit-tests/`  = Testing individual components  
 `integration-tests/` = Testing the whole system
 
+💡 **How It All Works Together:**
+1. Use `sample-data/` to provide test cases
+2. Run `unit-tests/` on individual functions
+3. Perform `integration-tests/` on the whole system
+
 ## Test Categories
 - Unit Tests
 - Integration Tests
