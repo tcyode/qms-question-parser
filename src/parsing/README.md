@@ -12,6 +12,7 @@ Think of this like a translator 🔄
 - Output: Structured data (question ID, author, date, etc.)
 
 Example: Like taking a messy handwritten form and converting it into a neat spreadsheet
+
 In YOUR Project: `parsing/`: Processes Discord messages into questions
 
 ## Main Functions
