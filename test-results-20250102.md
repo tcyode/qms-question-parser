@@ -1,12 +1,8 @@
-# Create test results file with today's date
-$date = Get-Date -Format "yyyyMMdd"
-$branchName = git rev-parse --abbrev-ref HEAD
-$commitHash = git rev-parse --short HEAD
-
-# Create content with branch reference
+# Remove the PowerShell commands from the content
 @"
 # Test Coverage Report - $(Get-Date -Format 'yyyy-MM-dd')
-## Branch: $branchName (commit: $commitHash)
+## Branch: $(git rev-parse --abbrev-ref HEAD)
+## Commit: $(git rev-parse --short HEAD)
 
 ### High Coverage Components ✅
 1. Question Parser
@@ -37,4 +33,4 @@ $commitHash = git rev-parse --short HEAD
 - Most utility scripts are completely untested
 - Only Question Parser shows acceptable coverage
 - Integration layer needs significant work
-"@ | Out-File "test-results-$date.md"
+"@ | Out-File "test-results-$(Get-Date -Format 'yyyyMMdd').md"
