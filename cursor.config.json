@@ -1,0 +1,87 @@
+{
+  "projectType": "javascript",
+  "aiAssist": {
+    "enableInlineCompletion": true,
+    "enableContextAwareness": true
+  },
+  "watchedDirectories": {
+    "core": [
+      "src/config",
+      "src/handlers",
+      "src/integration",
+      "src/parsing",
+      "src/services",
+      "src/utils"
+    ],
+    "testing": [
+      "src/mocks",
+      "src/tests",
+      "src/tests/unit",
+      "src/tests/integration",
+      "src/tests/critical-path"
+    ],
+    "scripts": [
+      "src/scripts"
+    ],
+    "configuration": [
+      ".",
+      "docs"
+    ],
+    "mocks": [
+      "src/mocks/errors",
+      "src/mocks/fixtures",
+      "src/mocks/googleApps",
+      "src/mocks/helpers",
+      "src/mocks/services"
+    ]
+  },
+  "fileTypes": [
+    "js",
+    "json",
+    "md",
+    "yml",
+    "xml",
+    "config.js",
+    "test.js",
+    "setup.js",
+    "ignore",
+    "eslintrc",
+    "babelrc",
+    "env",
+    "lock"
+  ],
+  "projectStructure": {
+    "sourceRoot": "src",
+    "testRoot": "src/tests",
+    "mockRoot": "src/mocks",
+    "docsRoot": "docs",
+    "configRoot": ".",
+    "coverageRoot": "coverage",
+    "reportsRoot": "reports"
+  },
+  "testConfig": {
+    "groups": [
+      "critical",
+      "validation",
+      "error-handling",
+      "integration-flows",
+      "unit",
+      "parsing",
+      "handlers",
+      "services",
+      "ui",
+      "logging",
+      "config",
+      "dashboard",
+      "mocks",
+      "utils"
+    ]
+  },
+  "formatting": {
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true
+  }
+}
