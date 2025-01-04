@@ -1,59 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="31" failures="1" errors="0" time="2.764">
-  <testsuite name="Question Parser" errors="0" failures="0" skipped="6" timestamp="2024-12-30T19:12:43" time="2.137" tests="6">
-    <testcase classname="Question Parser › ID Formatting" name="should format question ID correctly" time="0">
-      <skipped/>
+<testsuites name="jest tests" tests="31" failures="13" errors="0" time="2.386">
+  <testsuite name="Question Parser" errors="0" failures="0" skipped="0" timestamp="2025-01-04T10:05:18" time="1.734" tests="6">
+    <testcase classname="Question Parser › ID Formatting" name="should format question ID correctly" time="0.016">
     </testcase>
-    <testcase classname="Question Parser › Basic Parsing" name="should parse basic question format" time="0">
-      <skipped/>
+    <testcase classname="Question Parser › Basic Parsing" name="should parse basic question format" time="0.002">
     </testcase>
-    <testcase classname="Question Parser › Edge Cases" name="should handle question with context and image" time="0">
-      <skipped/>
+    <testcase classname="Question Parser › Edge Cases" name="should handle question with context and image" time="0.001">
     </testcase>
-    <testcase classname="Question Parser › Edge Cases" name="should handle edited questions" time="0">
-      <skipped/>
+    <testcase classname="Question Parser › Edge Cases" name="should handle edited questions" time="0.001">
     </testcase>
-    <testcase classname="Question Parser › Multiple Questions" name="should parse multiple questions in one message" time="0">
-      <skipped/>
+    <testcase classname="Question Parser › Multiple Questions" name="should parse multiple questions in one message" time="0.001">
     </testcase>
-    <testcase classname="Question Parser › Image Handling" name="should handle questions with image attachments" time="0">
-      <skipped/>
+    <testcase classname="Question Parser › Image Handling" name="should handle questions with image attachments" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Sheets Integration" errors="0" failures="0" skipped="8" timestamp="2024-12-30T19:12:43" time="2.158" tests="8">
-    <testcase classname="Sheets Integration › processNewQuestion" name="should process single question successfully" time="0">
-      <skipped/>
+  <testsuite name="Sheets Integration" errors="0" failures="8" skipped="0" timestamp="2025-01-04T10:05:18" time="1.864" tests="8">
+    <testcase classname="Sheets Integration › processNewQuestion" name="should process single question successfully" time="0.015">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › processNewQuestion" name="should handle processing errors gracefully" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › processNewQuestion" name="should handle processing errors gracefully" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
     <testcase classname="Sheets Integration › processMultipleQuestions" name="should process multiple questions successfully" time="0">
-      <skipped/>
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › processMultipleQuestions" name="should handle partial failures in multiple questions" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › processMultipleQuestions" name="should handle partial failures in multiple questions" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › updateExistingQuestion" name="should update question successfully" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › updateExistingQuestion" name="should update question successfully" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › updateExistingQuestion" name="should handle update failures" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › updateExistingQuestion" name="should handle update failures" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › getProcessedQuestions" name="should retrieve questions with filters" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › getProcessedQuestions" name="should retrieve questions with filters" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="Sheets Integration › getProcessedQuestions" name="should handle retrieval errors" time="0">
-      <skipped/>
+    <testcase classname="Sheets Integration › getProcessedQuestions" name="should handle retrieval errors" time="0.001">
+      <failure>ReferenceError: parseQuestion is not defined
+    at new parseQuestion (C:\Users\tyeki\qms-question-parser\src\integration\sheetsIntegration.js:20:25)
+    at Object.&lt;anonymous&gt; (C:\Users\tyeki\qms-question-parser\src\tests\integration\sheetsIntegration.test.js:30:23)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusHook (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:281:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:246:5)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="SheetHandler" errors="0" failures="1" skipped="15" timestamp="2024-12-30T19:12:43" time="2.187" tests="17">
-    <testcase classname="SheetHandler › Basic Operations" name="should initialize correctly" time="0">
-      <skipped/>
+  <testsuite name="SheetHandler" errors="0" failures="5" skipped="0" timestamp="2025-01-04T10:05:18" time="1.867" tests="17">
+    <testcase classname="SheetHandler › Basic Operations" name="should initialize correctly" time="0.014">
     </testcase>
-    <testcase classname="SheetHandler › Basic Operations" name="should get sheet by name" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Basic Operations" name="should get sheet by name" time="0.004">
     </testcase>
-    <testcase classname="SheetHandler › Write Operations" name="should write question to question bank" time="0.015">
+    <testcase classname="SheetHandler › Write Operations" name="should write question to question bank" time="0.004">
     </testcase>
     <testcase classname="SheetHandler › Write Operations" name="should log raw data" time="0.003">
       <failure>Error: expect(received).toBe(expected) // Object.is equality
@@ -77,44 +205,113 @@ Received: undefined
     at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
     at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="SheetHandler › Read Operations" name="should get all questions" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Read Operations" name="should get all questions" time="0.003">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Matcher error: received value must have a length property whose value must be a number
+
+Received has value: undefined
+    at Object.toHaveLength (C:\Users\tyeki\qms-question-parser\src\tests\handlers\sheetHandler.test.js:90:31)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="SheetHandler › Read Operations" name="should handle empty sheet" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Read Operations" name="should handle empty sheet" time="0.002">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Matcher error: received value must have a length property whose value must be a number
+
+Received has value: undefined
+    at Object.toHaveLength (C:\Users\tyeki\qms-question-parser\src\tests\handlers\sheetHandler.test.js:97:31)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="SheetHandler › Validation Methods" name="should validate correct question ID format" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Validation Methods" name="should validate correct question ID format" time="0.001">
     </testcase>
     <testcase classname="SheetHandler › Validation Methods" name="should reject invalid question ID format" time="0">
-      <skipped/>
     </testcase>
-    <testcase classname="SheetHandler › Range Operations" name="should handle invalid range parameters" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Range Operations" name="should handle invalid range parameters" time="0.001">
     </testcase>
     <testcase classname="SheetHandler › Range Operations" name="should handle range exceeding sheet bounds" time="0">
-      <skipped/>
     </testcase>
     <testcase classname="SheetHandler › Range Operations" name="should handle valid range parameters" time="0">
-      <skipped/>
     </testcase>
-    <testcase classname="SheetHandler › Error Handling" name="should handle sheet not found" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Error Handling" name="should handle sheet not found" time="0.002">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: false
+Received: true
+    at Object.toBe (C:\Users\tyeki\qms-question-parser\src\tests\handlers\sheetHandler.test.js:166:28)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="SheetHandler › Error Handling" name="should handle permission errors" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Error Handling" name="should handle permission errors" time="0.002">
     </testcase>
-    <testcase classname="SheetHandler › Error Handling" name="should handle quota exceeded errors" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Error Handling" name="should handle quota exceeded errors" time="0.003">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: []
+Received: undefined
+    at Object.toEqual (C:\Users\tyeki\qms-question-parser\src\tests\handlers\sheetHandler.test.js:182:28)
+    at Promise.then.completed (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\tyeki\qms-question-parser\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\tyeki\qms-question-parser\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="SheetHandler › Edge Cases" name="should handle sheet name with special characters" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Edge Cases" name="should handle sheet name with special characters" time="0.001">
     </testcase>
-    <testcase classname="SheetHandler › Edge Cases" name="should handle maximum row count" time="0">
-      <skipped/>
+    <testcase classname="SheetHandler › Edge Cases" name="should handle maximum row count" time="0.001">
     </testcase>
     <testcase classname="SheetHandler › Edge Cases" name="should handle sheet at maximum capacity" time="0">
-      <skipped/>
     </testcase>
   </testsuite>
 </testsuites>

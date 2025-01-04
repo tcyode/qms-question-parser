@@ -1,0 +1,66 @@
+# Get today's date for the filename
+$date = Get-Date -Format "yyyyMMdd"
+$timestamp = "2025-01-04T10:05:20.362Z"
+
+# Create new report with current date
+$content = @"
+# Test Coverage Report - 2025-01-04
+## Branch: main (Latest Test Results from Jest/Istanbul)
+
+### High Coverage Components ✅
+1. Question Parser
+   - Functions: 100% (6/6)
+   - Lines: 87.27% (48/55)
+   - Status: PASSING
+   - Key Files: src/parsing/questionParser.js
+   - All 6 test cases passing
+   - Test Date: $timestamp
+
+### Partial Coverage Components 🟨
+1. Sheets Integration
+   - Functions: 11.11% (1/9)
+   - Lines: 12.5% (5/40)
+   - Status: CRITICAL - All Tests Failed
+   - Key Files: src/integration/sheetsIntegration.js
+   - Error: parseQuestion not defined
+   - Test Date: $timestamp
+
+2. Config Files
+   - Functions: 100% (0/0)
+   - Lines: 100% (2/2)
+   - Status: PASSING
+   - Key Files: src/config/sheetsConfig.js
+   - Test Date: $timestamp
+
+### Failed Components ❌
+1. Sheet Handler
+   - Functions: 44.44% (8/18)
+   - Lines: 46.15% (24/52)
+   - Status: NEEDS ATTENTION
+   - 15 Skipped Tests
+   - 1 Failed Test: log raw data
+   - Test Date: $timestamp
+
+## Action Items
+1. Fix parseQuestion function in sheetsIntegration.js
+2. Address 15 skipped tests in SheetHandler
+3. Fix failing 'log raw data' test
+4. Review integration layer coverage
+
+## Notes
+- Test Suite: 31 total tests
+- 13 failures, 18 passing
+- Execution Time: 2.386s
+- Test coverage report generated from Jest/Istanbul at $timestamp
+- Coverage Tool: Jest with Istanbul
+- Test Run ID: TEST-20250104-001
+
+## References
+- Coverage Report: coverage/lcov-report/index.html
+- Test Suite: tests/
+- Previous Report: test-results-20250102.md
+- Report Generated: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+"@ 
+
+# Save as new file
+$content | Out-File "docs/test-reports/2025/test-results-$date.md" -Encoding UTF8

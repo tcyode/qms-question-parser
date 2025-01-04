@@ -20,3 +20,39 @@
 - Data Formats
 - Function Documentation
 - Error Codes
+
+# Mock Data Structure 🔧
+
+## Purpose
+Centralized location for all mock data used in testing. This structure ensures:
+- Consistent test data across all tests
+- Single source of truth for mock responses
+- Easy maintenance and updates
+- Reduced duplication
+
+## Mock Files
+1. `mockDiscordApi.js`
+   - Discord message formats
+   - API response structures
+   - Error scenarios
+   - Webhook payloads
+
+2. `mockSheetsData.js`
+   - Sheet responses
+   - Question bank data
+   - Raw input examples
+   - Processing results
+
+3. `mockParsingData.js`
+   - Input/output pairs
+   - Edge cases
+   - Invalid formats
+   - Special characters
+
+## Usage Guidelines
+- Import only needed mock data
+- Use destructuring for partial imports
+- Keep mock data immutable
+- Document any mock data changes
+
+## Example Usage
