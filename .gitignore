@@ -18,3 +18,10 @@ node_modules/
 # Temporary files
 .tmp
 .temp
+
+# Coverage reports
+coverage/
+
+# Environment variables
+.env
+.env.local
