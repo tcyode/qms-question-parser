@@ -13,10 +13,12 @@
     - `mockParsingData.js` - Parsing test data mocks
 
 ### Changed
+- Simplified error handling:
+  - Removed separate services layer
+  - Implementing inline error handling
+  - Error handling moved to integration and main.js
 - Moved mocks from tests/mocks to src/mocks
-- Consolidated duplicate mock data
-- Standardized mock data formats
-- Updated import paths in tests
+- Streamlined project structure
 
 ### Maintained
 - Existing test functionality
