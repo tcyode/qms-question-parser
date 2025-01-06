@@ -1,0 +1,37 @@
+{
+    "projectType": "javascript",
+    "aiAssist": {
+      "enableInlineCompletion": true,
+      "enableContextAwareness": true,
+      "includePatterns": [
+        "src/**/*.js",
+        "tests/**/*.js",
+        "docs/*.md",
+        "*.json",
+        "*.config.js",
+        "jest.*.js"
+      ],
+      "excludePatterns": [
+        "node_modules/**",
+        "coverage/**",
+        "reports/**",
+        ".git/**",
+        "*.log",
+        "dist/**"
+      ]
+    },
+    "formatting": {
+      "useTabs": false,
+      "tabWidth": 2,
+      "singleQuote": true
+    },
+    "testing": {
+      "testMatch": ["**/*.test.js"],
+      "coverage": true
+    },
+    "paths": {
+      "source": "src",
+      "tests": "src/tests",
+      "docs": "docs"
+    }
+  }
